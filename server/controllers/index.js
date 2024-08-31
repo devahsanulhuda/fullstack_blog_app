@@ -18,3 +18,5 @@ root.render(
     </BrowserRouter>
   </React.StrictMode>
 );
+
+// npm i axios firebase markdown-to-jsx react react-dom react-icons react-router-dom react-scripts sonner web-vitals zustand
