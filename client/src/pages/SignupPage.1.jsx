@@ -1,7 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-export const SignupPage.1 = () => {
+const SignupPage.1 = () => {
   return (
-    <div>SignupPage.1</div>
-  )
-}
+    <div>
+      <h2></h2>
+    </div>
+  );
+};
+
+export default SignupPage.1;
