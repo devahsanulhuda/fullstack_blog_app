@@ -1,4 +1,8 @@
 import { Navigate, Outlet, Route, Routes, useLocation } from "react-router-dom";
+import Sidebar from "./components/Sidebar";
+import Navbar from "./components/Navbar";
+import StartPage from "./pages/StartPage";
+import OTPVerification from "./pages/OTPVerification";
 
 function Layout() {
   const user = {};
@@ -6,9 +10,11 @@ function Layout() {
 
   return user?.token ? (
     <div className="w-full h-screen">
-      {/* <Navbar /> */}
+      <Navbar />
       <div className="w-full h-full border-t pt-16">
-        <div className="hidden lg:flex">{/* <Sidebar /> */}</div>
+        <div className="hidden lg:flex">
+          <Sidebar />
+        </div>
         <div className="w-full flex-1 px-8 py-6 overflow-y-auto">
           <Outlet />
         </div>
@@ -27,8 +33,8 @@ function App() {
           <Route index path="/" element={<Navigate to="dashboard" />} />
         </Route>
 
-        {/* <Route path="/auth" element={<StartPage />} />
-        <Route path="/otp-verification" element={<OTPVerification />} /> */}
+        <Route path="/auth" element={<StartPage />} />
+        <Route path="/otp-verification" element={<OTPVerification />} />
       </Routes>
     </main>
   );
