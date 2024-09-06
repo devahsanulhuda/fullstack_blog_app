@@ -6,10 +6,11 @@ import { MdArrowForward } from "react-icons/md";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Toaster, toast } from "sonner";
 import Loading from "../components/Loading";
-import LoginForm from "../components/LoginForm";
+
 import Navbar from "../components/Navbar";
 import SignUpForm from "../components/SignUpForm";
 import useStore from "../store/index";
+import LoginForm from "../components/LoginForm";
 
 const StartPage = () => {
   const { colorScheme } = useMantineColorScheme();
